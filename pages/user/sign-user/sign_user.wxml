@@ -1,0 +1,90 @@
+<view class="container">
+  <view class="container_items">
+    
+    <view class="sign_user_tags">
+      <view class="user_tags">
+        <block wx:for="{{tagList}}" wx:key="name">
+        <view class="user_tag {{item.status == currentTag ? 'user_tag_active' : ''}}" bindtap="tagOnChange" data-status="{{item.status}}">
+          <text>{{item.name}}</text>
+        </view>
+        </block>
+      </view>
+    </view>
+
+    <view class="sign_user_contact">
+      <block wx:for="{{signArray}}" wx:key="date">
+      <view class="user_contact_item">
+        <view class="contact_item_title">
+          <view class="c_item_title_date">
+            <text class="title_date">{{item.date}}</text>
+            <text class="title_time">{{item.time}}</text>
+          </view>
+          <text wx:if="{{item.type==1}}" class="title_status status_pay">待支付</text>
+          <text wx:if="{{item.type==2}}" class="title_status status_check">待审核</text>
+          <text wx:if="{{item.type==3}}" class="title_status status_pass">审核通过</text>
+          <text wx:if="{{item.type==4}}" class="title_status status_back">审核驳回</text>
+        </view>
+        <view class="contact_item_detail">
+          <view class="detail_box">
+            <view class="detail_item">
+              <text class="detail_item_addr">{{item.addr}}</text>
+            </view>
+            <view class="detail_item">
+              <view class="detail_item_types">
+                <block wx:for="{{item.payTypes}}" wx:key="payName">
+                <view class="detail_item_type">{{item.payName}}</view>
+                </block>
+              </view>
+            </view>
+            <view class="detail_item">
+              <view class="detail_item_room">
+                <view class="room_label">分拆:</view>
+                <block wx:for="{{item.roomTypes}}">
+                <view class="room_type">
+                  <text>{{item.roomName}}</text>
+                </view>
+                </block>
+              </view>
+            </view>
+            <view class="detail_item">
+              <text class="detail_item_contract">合同期：{{item.deadTime}}</text>
+            </view>
+            <view class="detail_item detail_item_btn">
+              <button wx:if="{{item.type==1}}" class="detail_item_pay">
+                <text>立即付款</text>
+              </button>
+              <button wx:if="{{item.type==3}}" class="detail_item_see">
+                <text>查看合同</text>
+              </button>
+              <button wx:if="{{item.type==4}}" class="detail_item_see">
+                <text>重新编辑</text>
+              </button>
+            </view>
+          </view>
+        </view>
+      </view>
+      </block>
+    </view>
+  </view>
+</view>
+<!-- <view class="container">
+  <view class="sign_user_item">
+    <view class="user_i_date">
+      <text>2019-10-10 09:03:01</text>
+      <text>待支付</text>
+    </view>
+    <view class="user_i_type">
+      <text>整租 300/月</text>
+      <text>押3付3</text>
+    </view>
+    <view class="user_i_contract">
+      <text>合同期：2019-09-09~2020-09-09</text>
+    </view>
+    <view class="user_i_addr">
+      <text>上海市嘉定区永靖路288弄19幢53-56号新城枫景5幢1101</text>
+    </view>
+    <view class="user_i_btn">
+      <button size="mini" bindtap="goApplyPage">立即支付</button>
+    </view>
+  </view>
+</view> -->

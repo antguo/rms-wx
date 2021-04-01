@@ -1,0 +1,65 @@
+<view class="container">
+  <view class="constainer_item">
+    <view class="certificate_item">
+      <view class="certificate_item_title">
+        <view class="certificate_title_icon"></view>
+        <text>选择房产证类型</text>
+      </view>
+      <view class="certificate_item_upload">
+        <view class="certificate_upload_imgs">
+          <block wx:for="{{housecardlist}}" wx:key="id">
+            <view class="c_u_img_item">
+              <view class="c_u_img {{curTypeIndex == index? 'c_u_img_active':''}}" data-index="{{index}}" catchtap="changeHousecard">
+                <image src="{{item.url}}" mode="aspectFit"></image>
+              </view>
+              <text>{{item.title}}</text>
+            </view>
+          </block>
+        </view>
+
+        <view class="certificate_upload_tips">
+          <text class="c_u_tips">提示：</text>
+          <text>{{housecardlist[curTypeIndex].title}}</text>
+        </view>
+        <view class="certificate_upload_imgs imgGroup" style="border:none;justify-content: flex-start;">
+          <block wx:if="{{housecardlist}}" wx:for="{{housecardlist[curTypeIndex].sampleUrlArr}}" wx:key="{{index}}">
+            <view class="c_u_img_item">
+              <view class="c_u_img">
+                <image src="{{item}}" mode="aspectFit" bindtap="prviewImg" data-item="{{item}}" data-arr="{{housecardlist[curTypeIndex].sampleUrlArr}}"></image>
+              </view>
+            </view>
+          </block>
+        </view>
+				
+      </view>
+    </view>
+    <view class="certificate_item">
+      <view class="certificate_item_title">
+        <view class="certificate_title_icon"></view>
+        <text>上传房产证</text>
+      </view>
+      <view class="certificate_item_upload">
+        <view class="certificate_upload_imgs imgGroup" style="border:none;justify-content: flex-start;">
+          <block wx:for="{{typeUploadArray}}" wx:key="name">
+            <view class="c_u_img_item">
+              <view class="c_u_img imgWrap" style="border:none;">
+                <image src="{{item}}" mode="aspectFill"></image>
+                <view bindtap="delImg" data-index="{{index}}" class="delImg flex-center">-</view>
+              </view>
+            </view>
+          </block>
+          <view class="c_u_img_item img_click_icon" bindtap="uploadHousecard">
+            <view class="c_u_img_box">
+              <view class="c_u_img_icon">
+                <image src="/images/icon/upload-capture.png" mode="aspectFill"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="certificate_next">
+      <button class="certificate_next_btn" bindtap="goIdentity">下一步</button>
+    </view>
+  </view>
+</view>

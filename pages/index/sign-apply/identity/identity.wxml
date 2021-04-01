@@ -1,0 +1,49 @@
+<view class="container">
+  <view class="constainer_item">
+    <view class="identity_item">
+      <view class="identity_item_title">
+        <view class="identity_title_icon"></view>
+        <view class="flex-col-end tit">上传身份证
+          <text class="msg">未成年人拍摄户口本(本人页)和关系证明各一张</text>
+        </view>
+      </view>
+      <view class="identity_item_contact">
+        <view class="id_item_contact">
+          <text class="id_item_contact_title">出租人身份证:</text>
+          <block wx:for="{{info.landlordInfos}}" wx:key="{{index}}">
+            <view class="id_item_contact_mig">
+              <text class="id_mig_title">{{item.userName}}</text>
+              <view class="id_mig_item" bindtap="chooseImg" data-index="{{index}}" data-arr="landlordInfos" data-val="idCardA">
+                <image src="{{item.idCardA?item.idCardA:'/images/idCardA.png'}}" mode="aspectFill"></image>
+              </view>
+              <view class="id_mig_item" bindtap="chooseImg" data-index="{{index}}" data-arr="landlordInfos" data-val="idCardB">
+                <image src="{{item.idCardB?item.idCardB:'/images/idCardB.png'}}" mode="aspectFill"></image>
+              </view>
+            </view>
+          </block>
+        </view>
+        <view class="id_item_contact" style="border:none;">
+          <text class="id_item_contact_title">承租人身份证:</text>
+          <block wx:for="{{info.tenantsInfos}}" wx:key="{{index}}">
+            <view class="id_item_contact_mig">
+              <text class="id_mig_title">{{item.userName}}</text>
+              <view class="id_mig_item" bindtap="chooseImg" data-index="{{index}}" data-arr="tenantsInfos" data-val="idCardA">
+                <image src="{{item.idCardA?item.idCardA:'/images/idCardA.png'}}" mode="aspectFill"></image>
+              </view>
+              <view class="id_mig_item" bindtap="chooseImg" data-index="{{index}}" data-arr="tenantsInfos" data-val="idCardB">
+                <image src="{{item.idCardB?item.idCardB:'/images/idCardB.png'}}" mode="aspectFill"></image>
+              </view>
+            </view>
+          </block>
+        </view>
+        <view class="tenantsRelation flex-column" wx:if="{{info.tenantsInfos.length>2}}">
+          <text>承租人关系证明:</text>
+          <image bindtap="tenantsRelationImg" mode="aspectFill" src="{{tenantsRelation?tenantsRelation:'/images/upload-image.png'}}"></image>
+        </view>
+      </view>
+    </view>
+    <view class="identity_next">
+      <button class="identity_next_btn" bindtap="goApplyPage">提交申请</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/user/user",
+    "pages/help/help",
+    "pages/web-view/web-view",
+    "pages/user/personal-info/personal_info",
+    "pages/user/contract/contract",
+    "pages/user/about/about",
+    "pages/user/sign-user/sign_user",
+    "pages/index/sign-apply/sign_apply",
+    "pages/index/sign-apply/commitment-letter/commitment_letter",
+    "pages/index/sign-apply/ownership-certificate/ownership_certificate",
+    "pages/index/sign-apply/identity/identity",
+    "pages/index/sign-apply/apply-success/apply_success",
+    "pages/help/detail/detail",
+    "components/select/select",
+    "components/pickers/pickers",
+    "components/waves/waves",
+    "pages/index/sign-cancel/sign_cancel",
+    "pages/index/sign-cancel-detail/sign-cancel-detail",
+    "pages/index/sign-change/sign_change",
+    "pages/user/sign-order/sign_order",
+    "pages/index/sign-change-detail/sign-change-detail",
+    "pages/index/commitment-book/commitment-book",
+    "pages/index/commitment-book2/commitment-book2",
+    "pages/index/sign-apply/payAgreement/payAgreement",
+    "pages/index/sign-apply/adressInfo/adressInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#3889f0",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/icon/icon-index.png",
+        "selectedIconPath": "/images/icon/icon-index-cur.png"
+      },
+      {
+        "pagePath": "pages/help/help",
+        "text": "帮助",
+        "iconPath": "/images/icon/icon-help.png",
+        "selectedIconPath": "/images/icon/icon-help-cur.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/images/icon/icon-my.png",
+        "selectedIconPath": "/images/icon/icon-my-cur.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "是否允许获取您的当前位置信息"
+    }
+  }
+}

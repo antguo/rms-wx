@@ -1,0 +1,12 @@
+<view class="main">
+  <view class="tit text-center">承诺书</view>
+  <view class="cent">
+    <view>
+			本人<text>{{info.userName}}</text>自愿将坐落于<text>{{info.address}}</text>出租给<text>{{tenantsName}}</text>租赁期限<text>{{startYear}}</text>年<text>{{startMonth}}</text>月<text>{{startDay}}</text>日至<text>{{endYear}}</text>年<text>{{endMonth}}</text>月<text>{{endDay}}</text>日止，该房屋租金为（人民币）<text>{{info.rent}}</text>元/月。
+		</view>
+		<view class="flex-row-between">
+			<text>特此承诺</text>
+			<text>{{date}}</text>
+		</view>
+  </view>
+</view>

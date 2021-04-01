@@ -1,0 +1,52 @@
+<view class="container">
+  <view class="container_items">
+
+    <view class="sign_user_contact">
+      <block wx:if="{{orderList.length!=0}}" wx:for="{{orderList}}" wx:key="date">
+        <view class="user_contact_item">
+          <view class="contact_item_title">
+            <view class="c_item_title_date">
+              <text class="title_date">网签时间：{{item.createTime}}</text>
+            </view>
+            <!-- <text class="title_status status_pass">网签成功</text> -->
+          </view>
+          <view class="contact_item_detail">
+            <view class="detail_box">
+              <view class="detail_item">
+                <text class="detail_item_addr">{{item.address}}</text>
+              </view>
+              <view class="detail_item">
+
+              </view>
+              <view class="detail_item">
+                <view class="detail_item_room">
+                  <block wx:if="{{item.rentType == 0}}">
+                    <view class="room_type">整屋出租</view>
+                  </block>
+                  <block wx:if="{{item.rentType == 1}}" wx:for="{{item.roomCode}}" wx:id="id" wx:for-item="dict">
+                    <view class="room_label">分拆出租：</view>
+                    <view class="room_type">{{dict.direction}}{{dict.num}}</view>
+                  </block>
+                </view>
+              </view>
+              <view class="detail_item">
+                <text class="detail_item_contract">合同期：{{item.startDate}}~{{item.endDate}}</text>
+              </view>
+              <view class="detail_item detail_item_btn">
+                <button class="detail_item_pay" bindtap="cancelSign" data-id="{{item.id}}">
+                  <text>申请撤销</text>
+                </button>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+      <block wx:if="{{orderList.length==0}}">
+        <view class="noData flex-column flex-center">
+          <image mode="widthFix" src="/images/noData.png"></image>
+          <text>没有合同期内的网签</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

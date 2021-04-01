@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="container_items">
+    <view class="pay_item">
+      <view class="pay_item_img">
+        <view class="pay_img">
+          <image src="/images/upload-success.png" mode="aspectFit"></image>
+        </view>
+        <text>申请成功</text>
+      </view>
+      <view class="pay_item_contact">
+        <text>网签费用</text>
+        <view>
+          <text class="pay_num">{{price}}</text>元
+        </view>
+      </view>
+    </view>
+    <checkbox-group bindchange="checkChange" class="payAgreement flex-center">
+      <checkbox value="0" color="#3889f0"></checkbox>
+      <view class="flex-col-center">
+       已阅读并同意
+       <navigator url="/pages/index/sign-apply/payAgreement/payAgreement" hover-class="none">《付款协议》</navigator>
+      </view>
+    </checkbox-group>
+    <view class="pay_step">
+      <button class="pay_step_reload" bindtap="laterPay">稍后付款</button>
+      <button class="pay_step_next" bindtap="pay">立即付款</button>
+    </view>
+  </view>
+</view>

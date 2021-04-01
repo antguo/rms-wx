@@ -1,0 +1,15 @@
+<import src="../../../utils/wxParse/wxParse.wxml"/>
+
+<view class="container">
+  <view class="constainer_item">
+    <view class="about_item">
+      <view class="about_item_title">
+        <view class="about_title_icon"></view>
+        <text>{{article.articleTitle}}</text>
+      </view>
+      <view class="about_item_contact">
+          <template is="wxParse" data="{{wxParseData:articleData.nodes}}" />
+      </view>
+    </view>
+  </view>
+</view>

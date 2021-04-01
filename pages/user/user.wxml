@@ -1,0 +1,51 @@
+<view class="container">
+	<view class="container_items">
+		<view class="user_header" bindtap="gotoUserInfo">
+			<block wx:if="{{isLogin}}">
+				<view class="user_msg">
+					<view class="user_msg_pic">
+						<image src="{{user.imagesUrl}}" mode="aspectFill"></image>
+					</view>
+					<view class="user_msg_detail">
+						<text class="user_msg_name">{{user.userName}}</text>
+            <view class="msg">如需邮寄合同，需要完善地址信息</view>
+						<!-- <text class="user_msg_tel">{{user.mobile}}</text> -->
+					</view>
+				</view>
+				<view class="user_h_arrow">
+					<image src="/images/icon/arrow-right.png" mode="aspectFill"></image>
+				</view>
+			</block>
+			<block wx:if="{{!isLogin}}">
+				<view class="user_msg_pic flex-col-center">
+					<image src="/images/icon/my.png" mode="aspectFill"></image>
+					<text class="login-tips">点击登录</text>
+				</view>
+			</block>
+      <view class="red" wx:if="{{hasAddress == 0 && isLogin==true}}"></view>
+		</view>
+
+		<view class="user_items">
+			<block wx:for="{{userItemArray}}" wx:key="type">
+				<view class="user_item" catchtap="gotoOpeartion" data-name="{{item.name}}">
+					<view class="user_item_name">
+						<view class="user_item_n_icon">
+							<image src="{{item.imgUrl}}" mode="aspectFill"></image>
+						</view>
+						<text>{{item.name}}</text>
+					</view>
+					<view class="user_item_tel">
+						<view class="flex-column flex-center" wx:if="{{item.type==2}}" bindtap="goContact">
+              <text>{{item.tel}}</text>
+              <text style="font-size:24rpx;">工作日8:30~16:30</text>
+            </view>
+						<view class="user_item_arrow">
+							<image src="/images/icon/arrow-right.png" mode="aspectFill"></image>
+						</view>
+					</view>
+          <view class="red" wx:if="{{index == 0 && hasOrder == 1}}"></view>
+				</view>
+			</block>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,98 @@
+/**app.wxss**/
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}  */
+.container{
+  display: flex;
+  flex-wrap: wrap;
+}
+button{
+  margin: 0;
+}
+.constainer_item{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 0 20rpx;
+}
+
+
+
+.flex{
+  display: flex;
+}
+.flex-column{
+  display: flex;flex-direction:column;
+}
+/* 水平垂直居中 */
+.flex-center{
+  display: flex;align-items: center;justify-content: center;
+}
+/* 水平居中 */
+.flex-row-center{
+  display: flex;justify-content: center;
+}
+/* 垂直居中 */
+.flex-col-center{
+  display: flex;align-items: center;
+}
+/* 垂直上对齐 */
+.flex-col-start{
+  display: flex;align-items: flex-start;
+}
+.flex-col-end{
+  display: flex;align-items: flex-end;
+}
+/* 水平两端对齐 */
+.flex-row-between{
+  display: flex;justify-content: space-between;
+}
+/* 水平左对齐 */
+.flex-row-start{
+  display: flex;justify-content: flex-start;
+}
+/* 水平右对齐 */
+.flex-row-end{
+  display: flex;justify-content: flex-end;
+}
+/* 换行 */
+.flex-wrap{
+  display: flex;flex-wrap: wrap;
+}
+/* 自动放大或缩小 */
+.flex-auto{
+  flex: auto;
+}
+/* 不自动放大或缩小 */
+.flex-none{
+  flex: none;
+}
+/**** flex通用样式 ****/
+
+/* 文字对齐 */
+.text-left{
+  text-align: left;
+}
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+/* 文字对齐 */
+/* 文字溢出隐藏 */
+.text-overflow-1{
+  overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+}
+.text-overflow-2{
+  display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;
+}
+.text-overflow-3{
+  display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden;
+}

@@ -1,0 +1,55 @@
+<view class="container">
+
+  <view class="header">
+    <swiper autoplay="true">
+      <block wx:for="{{bannerList}}" wx:key="imageUrl">
+      <swiper-item>
+        <image src="{{item.imgPath}}" lazy-load="true" bindtap="goUrl" data-title="{{item.title}}" data-url="{{item.urlPath}}" mode="aspectFit"></image>
+      </swiper-item>
+      </block>
+    </swiper>
+    <view class="header_dots">
+      <block wx:for="{{bannerList}}" wx:key="index">
+      <view class="dot_nchoice {{index == currentSwiper? 'dot_choice':''}}"></view>
+      </block>
+    </view>
+  </view>
+
+  <view class="footer">
+    <view class="footer_item">
+      <view class="footer_process">
+        <block wx:for="{{processArray}}" wx:key="type">
+        <view wx:if="{{item.type==1}}" class="footer_p_items">
+          <view class="f_p_items_icon">
+            <image src="{{item.imgUrl}}" mode="aspectFill"></image>
+          </view>
+          <text>{{item.name}}</text>
+        </view>
+        <view wx:else class="footer_p_items">
+          <image class="f_p_items_line" src="/images/line-lightblue.png" mode="aspectFill"></image>
+        </view>
+        </block>
+      </view>
+    </view>
+
+    <view class="footer_item">
+      <block wx:for="{{signArray}}" wx:key="color">
+      <view class="footer_sign" bindtap="switchLabel" data-name="{{item.name}}">
+        <view class="footer_sign_left">
+          <view class="f_s_left_icon" style="background-color:{{item.color}};">
+            <image src="{{item.imgUrl}}" mode="aspectFill"></image>
+          </view>
+          <view class="flex-column">
+            <text>{{item.name}}</text>
+            <!-- <text class="changeMsg" wx:if="{{index == 1}}">网签7日内可以免费变更</text> -->
+          </view>
+        </view>
+        <view class="footer_sign_right">
+          <image src="/images/icon/arrow-right.png" mode="aspectFill"></image>
+        </view>
+      </view>
+      </block>
+    </view>
+    
+  </view>
+</view>

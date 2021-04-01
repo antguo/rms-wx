@@ -1,0 +1,103 @@
+/* pages/my/my.wxss */
+page{
+    height: 100%;
+}
+.login-bg{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.title{
+  font-size: 50rpx;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 100rpx;
+  color: #fff;
+}
+.sub-title{
+  margin-top: 20px;
+  font-size: 30rpx;
+  color: #f9eee5;
+  text-align: center;
+}
+.login-btn{
+  position: fixed;
+  bottom: 120rpx;
+  left: 20%;
+  width: 60%;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 50rpx;
+  color: #fff;
+  background: #4aabff;
+  font-size: 35rpx;
+  text-align: center;
+  font-weight: bold;
+}
+button::after {
+  border: 0;
+}
+.login-btn image{
+  width: 48rpx;
+  vertical-align: middle
+}
+
+.popup{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 442rpx;
+  background: white;
+  transform: translate(-50%,-50%);
+  /* height: 486rpx; */
+  border-radius: 20rpx;
+  z-index: 9;
+  overflow: hidden;
+}
+.popup .tit{
+  font-size: 28rpx;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 100rpx;
+  position: relative;
+  line-height: 80rpx;
+}
+.popup .tit>text{
+  position: relative;
+  z-index: 10;
+}
+.popup .tit>image{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.popup>image{
+  width: 323rpx;
+  margin: 32rpx 0 38rpx;
+}
+.btn{
+  width: 350rpx;
+  height: 70rpx;
+  background: #3889F0;
+  border-radius:35rpx;
+  color: white;
+  font-size: 28rpx;
+  margin-bottom: 43rpx;
+  margin-top: 23rpx;
+  position: relative;
+}
+.btn button{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}

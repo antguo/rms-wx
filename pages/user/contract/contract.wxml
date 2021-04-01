@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="container_items">
+    <block wx:for="{{contractArray}}" wx:key="{{time}}">
+    <view class="contract_items">
+      <view class="contract_msg">
+        <text class="contract_msg_addr">{{item.addr}}</text>
+        <text class="contract_msg_time">{{item.time}}</text>
+      </view>
+      <view class="contract_img">
+        <view class="contract_arrow">
+          <image src="/images/icon/arrow-right.png" mode="aspectFill"></image>
+        </view>
+        <view class="contract_icon">
+          <image src="/images/icon/我的合同印章图标.png" mode="aspectFill"></image>
+        </view>
+      </view>
+    </view>
+
+    </block>
+  </view>
+</view>

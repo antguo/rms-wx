@@ -1,0 +1,165 @@
+page{
+  background-color: #f2f8f8;
+  border-top: solid 1rpx #d5d5d5;
+}
+.container_items{
+  width: 100%;
+}
+/* 公共样式start */
+.sign_user_contact,.user_contact_item,.user_tags,.user_tag,.contact_item_title,.detail_box,.detail_item_types,.detail_item_room,.detail_item_btn{
+  display: flex;
+}
+.room_label,.title_date,.title_status,.contact_item_detail,.detail_item_room{
+  font-size: 28rpx;
+}
+/* 公共样式end */
+/* 头部标签start */
+.sign_user_tags{
+  height: 90rpx;
+  width: 100%;
+  background-color: #ffffff;
+}
+.user_tags{
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 30rpx 40rpx 5px 40rpx;
+}
+.user_tag{
+  flex-direction: column;
+  justify-content: center;
+  width: auto;
+  font-size: 30rpx;
+  color: #666666;
+  padding-bottom: 22rpx;
+}
+.user_tag_active{
+  color: #3889f0;
+  border-bottom: 3rpx solid #3889f0;
+}
+.user_tag_line{
+  width: 100%;
+  height: 3rpx;
+  background-color: #3889f0;
+}
+/* 头部标签end */
+/* 内容样式start */
+.sign_user_contact{
+  flex-direction: column;
+  padding: 20rpx 20rpx 66rpx 20rpx;
+}
+.user_contact_item{
+  /* width: 100%; */
+  background-color: #ffffff;
+  border-radius: 8rpx;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.contact_item_title{
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  height: 80rpx;
+  border-bottom: solid 1rpx #e1e1e1;
+}
+.title_date{
+  color: #333333;
+  padding-left: 26rpx;
+}
+.title_time{
+  font-size: 20rpx;
+  color: #666666;
+  padding-left: 12rpx;
+}
+.status_pay,.status_check,.status_pass,.status_back{
+  padding-right: 26rpx;
+}
+.status_pay,.status_back{
+  color: #ff5500;
+}
+.status_check{
+  color: #3889f0;
+}
+.status_pass{
+  color: #999999;
+}
+.contact_item_detail{
+  width: 100%;
+  /* flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center; */
+}
+.detail_item_addr{
+  color: #333333;
+}
+.detail_box{
+  padding: 0 30rpx 24rpx 30rpx;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.detail_item{
+  padding-top: 26rpx;
+}
+.detail_item_types{
+  flex-direction: row;
+  flex-wrap: nowrap;
+  color: #666666;
+}
+.detail_item_type{
+  padding-right: 20rpx;
+  border-right: solid 1rpx #d6d6d6;
+  margin-right: 18rpx;
+}
+.room_label{
+  color: #999999;
+  padding-right: 14rpx;
+}
+.room_type{
+  border-radius: 4rpx;
+  border: 1rpx solid #3889f0;
+  color: #3889f0;
+  text-align: center;
+  width: auto;
+  margin-right: 11rpx;
+  padding: 0 8rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detail_item_room{
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.detail_item_contract{
+  color: #333;
+}
+.detail_item_error{
+  color: #ee1834;
+}
+/* 内容样式end */
+/* 按钮start */
+.detail_item_btn{
+  justify-content: flex-end;
+}
+.detail_item_pay,.detail_item_see{
+  width: 140rpx;
+  height: 54rpx;
+  font-size: 28rpx;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detail_item_pay{
+  background-color: #ff5500;
+  color: #ffffff;
+  border:none;
+}
+.detail_item_see{
+  color: #3889f0;
+  border: solid 1rpx #3889f0;
+  background-color: #ffffff;
+}
+.noData{margin-top: 200rpx;color: #999;}
+.noData image{width: 300rpx;margin-bottom: 30rpx;}

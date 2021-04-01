@@ -1,0 +1,62 @@
+.select{
+  display: flex;
+  height: auto;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.select-bar{
+  width: 100%;
+  height: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 10rpx 20rpx 10rpx;
+  /* border: solid 1rpx #efefef; */
+}
+.select-bar-text{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d5d5d5;
+}
+.select-arrow{
+  height: 40rpx;
+  width: 40rpx;
+  display: flex;
+  align-items: center;
+}
+.select-arrow image{
+  width: 100%;
+  height: 100%;
+}
+.select-option{
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  /* top: 215rpx; */
+  background-color: #fff;
+  /* border-left: solid 1rpx #efefef;
+  border-right: solid 1rpx #efefef; */
+  box-shadow:0 2px 10rpx 0 #efefef inset; 
+  z-index: 999 !important;
+}
+.option-item{
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx 0 20rpx;
+  border-bottom: solid 1rpx #efefef;
+}
+.option-hide {  
+  display: none !important; 
+} 
+.option-show {  
+  animation: slide 500ms; 
+}
+.choice-item{
+  background-color: skyblue;
+  color: white;
+}

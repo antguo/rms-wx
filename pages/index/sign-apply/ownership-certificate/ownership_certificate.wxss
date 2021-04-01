@@ -1,0 +1,159 @@
+page{
+  background-color: #faf9f7;
+  border-top: solid 1rpx #d5d5d5;
+}
+.constainer_item{
+  padding: 38rpx 20rpx;
+}
+/* 公共样式start */
+.certificate_item,.certificate_item_title,.certificate_upload_imgs,.c_u_item,.c_u_img_item,.certificate_item_upload,.c_upload_imgs,.c_u_img_box{
+  display: flex;
+}
+.c_u_img image,.c_u_img_icon image{
+  width: 100%;
+  height: 100%;
+}
+/* 公共样式end */
+/* 选择房产证类型start */
+.certificate_item{
+  width: 100%;
+  flex-direction: column;
+  font-size: 30rpx;
+  color: #666666;
+  background-color: #ffffff;
+  border-radius: 8rpx;
+  margin-bottom: 20rpx;
+}
+.certificate_item_title{
+  width: 100%;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 80rpx;
+  border-bottom: solid 1rpx #ececec;
+}
+.certificate_item_title text{
+  padding-left: 16rpx;
+  font-weight: bold;
+  color: #333333;
+}
+.certificate_title_icon{
+  width: 8rpx;
+  height: 28rpx;
+  background-color: #3889f0;
+  border-radius: 8rpx;
+  margin-left: 28rpx;
+}
+.certificate_item_upload{
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  padding:35rpx 24rpx 0 24rpx;
+}
+.certificate_upload_imgs{
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #d4d4d4;
+}
+.c_u_img_item{
+  /* width: 100%; */
+  flex-direction: column;
+  justify-content: center;
+  font-size: 22rpx;
+  color: #666666;
+  padding-bottom: 48rpx;
+  text-align: center;
+}
+.c_u_img_item text{
+  /* padding-top: 26rpx; */
+  margin: 26rpx 10rpx 0 10rpx;
+}
+.c_u_img{
+  height: 160rpx;
+  width: 170rpx;
+  border-radius: 8rpx;
+  border: solid 3rpx #d8d8d8;
+}
+.c_u_img image{
+  border-radius: 8rpx;
+}
+.c_u_img_active {
+  border: solid 3rpx #ffbe2b;
+}
+/* 提示start */
+.certificate_upload_tips{
+  padding-top: 44rpx;
+  padding-bottom: 38rpx;
+}
+.c_u_tips{
+  color: #3889f0;
+}
+/* 提示end */
+/* 选择房产证类型end */
+/* 上传房产证start */
+.c_upload_imgs{
+  /* width: 660rpx; */
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 26rpx;
+}
+.c_u_img_icon{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+/* .img_click_icon{
+  background-color: salmon;
+  padding-right: 6rpx;
+} */
+.c_u_img_box{
+  height: 160rpx;
+  width: 170rpx;
+  border-radius: 8rpx;
+  background-color: #faf9f7;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 上传房产证end */
+/* 上传start */
+.upload_items{
+  margin: 0;
+  padding: 0;
+}
+.upload_items_box{
+  width: 100%;
+  height: 100%;
+  background: pink;
+}
+.upload_item{
+  float: left;
+  width: 160rpx;
+  height: 160rpx;
+  border: solid 1rpx black;
+}
+/* 上传end */
+/* 下一步按钮start */
+.certificate_next{
+  width: 100%;
+  padding: 20rpx 20rpx 38rpx 20rpx;
+  margin-top: 45rpx;
+}
+.certificate_next_btn::after{
+  border: none;
+}
+wx-button{
+  background-color: #3889f0;
+  color: #ffffff;
+  width: 100%;
+  height: 90rpx;
+  font-size: 32rpx;
+}
+
+.imgGroup>view{margin-right: calc((100% - (170rpx * 3)) / 2);}
+.imgGroup>view:nth-of-type(3n){margin-right: 0;}
+.imgWrap{position: relative;}
+.imgWrap .delImg{position: absolute;right: 0;top: 0;height: 50rpx;width: 50rpx;background: red;color: white;font-size: 34rpx;}

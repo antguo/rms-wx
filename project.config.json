@@ -1,0 +1,120 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"coverView": true,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.8.3",
+	"appid": "wx80283a95f9c54ec9",
+	"projectname": "rms-wx",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/index/sign-apply/sign_apply",
+					"pathName": "pages/index/sign-apply/sign_apply",
+					"query": "id=198",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/index/sign-apply/identity/identity",
+					"pathName": "pages/index/sign-apply/identity/identity",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/login/login",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/sign-apply/commitment-letter/commitment_letter",
+					"pathName": "pages/index/sign-apply/commitment-letter/commitment_letter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "支付成功",
+					"pathName": "pages/index/sign-apply/apply-success/apply_success",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/sign-apply/adressInfo/adressInfo",
+					"pathName": "pages/index/sign-apply/adressInfo/adressInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/sign-apply/ownership-certificate/ownership_certificate",
+					"pathName": "pages/index/sign-apply/ownership-certificate/ownership_certificate",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "pages/index/sign-cancel-detail/sign-cancel-detail",
+					"pathName": "pages/index/sign-cancel-detail/sign-cancel-detail",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

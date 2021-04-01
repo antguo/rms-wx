@@ -1,0 +1,78 @@
+<view class="main">
+  <view class="infoWrap">
+    <view class="tit flex-col-center">
+      <view></view>
+      <text>基本信息</text>
+    </view>
+    <view class="apply_item_content flex" style="border:0;">
+      <text class="apply_bs_item_addr">产权地址</text>
+      <view class="apply_bs_item_right flex-auto">
+        <input disabled class="flex-auto" placeholder-style="color: #d5d5d5;" placeholder="请输入地址" bindinput="changeVal" data-val="address" value="{{address}}"></input>
+      </view>
+    </view>
+  </view>
+  <view class="infoWrap">
+    <view class="tit flex-col-center">
+      <view></view>
+      <text>租赁信息</text>
+    </view>
+    <view class="apply_item_content flex">
+      <text class="apply_item_contract">合同期</text>
+      <view class="apply_bs_item_right">
+        <picker mode="date" start="2019-01-01" data-end="2027-01-01" bindchange="changeStarData">
+          <view class="room_type_i_select flex">
+            <view style="width:180rpx;text-align:center;">
+              <text wx:if="{{startDate == ''}}" style="color: #d5d5d5;">请选择</text>
+              <text wx:else>{{startDate}}</text>
+            </view>
+            <image src="/images/icon/arrow.png" mode="aspectFill"></image>
+          </view>
+        </picker>
+        <text>至</text>
+        <picker mode="date" start="2019-01-01" end="2027-01-01" bindchange="changeEedData">
+          <view class="room_type_i_select flex">
+            <view style="width:180rpx;text-align:center;">
+              <text wx:if="{{endDate == ''}}" style="color: #d5d5d5;">请选择</text>
+              <text wx:else>{{endDate}}</text>
+            </view>
+            <image src="/images/icon/arrow.png" mode="aspectFill"></image>
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="apply_item_content flex" style="border:0;">
+      <text class="apply_item_contract">月租金</text>
+      <view class="apply_bs_item_right flex-col-center">
+        <input placeholder="请输入金额" type="number" bindinput="changeVal" data-val="rent" value="{{rent}}" placeholder-style="color:#d5d5d5"></input>
+        <text style="padding-left:18rpx;">元</text>
+      </view>
+    </view>
+  </view>
+  <view class="infoWrap">
+    <view class="tit flex-col-center">
+      <view class="border"></view>
+      <text>上传承诺书</text>
+    </view>
+    <view class="promiseWrap">
+      <view class="flex-center flex-column" style="width:100%;">
+        <view class="text-center">示例：</view>
+        <image mode="aspectFill" src="/images/commitment.jpg"></image>
+      </view>
+      <view class="imgGroup flex-wrap">
+        <view class="imgWrap" wx:for="{{undertakingPath}}"  wx:key="{{index}}">
+          <image mode="aspectFill" src="{{item}}"></image>
+          <view class="del flex-center" bindtap="delImg" data-index="{{index}}">-</view>
+        </view>
+        <view class="imgWrap" bindtap="uploadLetter" wx:if="{{undertakingPath.length<picker.length}}">
+          <image mode="aspectFill" src="/images/upload-image.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <picker class="generate" bindchange="pickerChange" range="{{picker}}" range-key="userName">
+    <view class="flex-center"><text>生成承诺书</text></view>
+  </picker>
+  <view class="apply_next">
+    <button class="apply_next_btn" bindtap="submit">提交变更申请</button>
+  </view>
+</view>

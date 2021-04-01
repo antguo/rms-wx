@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="container_items">
+    <view class="pay_item" wx:if="{{!hasAdress}}">
+      <view class="pay_item_img">
+        <view class="pay_img">
+          <image src="/images/address_error.png" mode="aspectFit"></image>
+        </view>
+        <text>未设置邮寄地址信息</text>
+      </view>
+    </view>
+		<view class="addressInfo" wx:else>
+			<view class="flex-col-center flex-row-between">
+				<view>收件人：{{user.recipients}}</view>
+				<view>电话：{{user.mobile}}</view>
+			</view>
+			<view>地址：{{user.province}}{{user.city}}{{user.area}}{{user.address}}</view>
+		</view>
+		
+		<view class="pay_step" wx:if="{{!hasAdress}}">
+      <button class="pay_step_reload" bindtap="laterPay">稍后设置</button>
+      <button class="pay_step_next" bindtap="toUserInfo">立即设置</button>
+    </view>
+		<view class="pay_step" wx:else>
+		  <button class="pay_step_reload" bindtap="toUserInfo">修改收货地址</button>
+		  <button class="pay_step_next" bindtap="laterPay">确认收货地址</button>
+		</view>
+  </view>
+</view>

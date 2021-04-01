@@ -1,0 +1,430 @@
+page {
+  background-color: #faf9f7;
+}
+
+/* .container{
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+.apply_header {
+  height: 200rpx;
+  width: 100%;
+}
+
+/* 公共样式start */
+
+apply_title_icon
+.apply_items, .apply_item, .apply_item_title,
+.apply_item_contents, .apply_item_content, .apply_bs_item_right,
+.apply_bs_item_r_choice, .room_type_item, .room_type_items,
+.apply_lessor_content, .apply_lessor_item, .apply_lessor_add,
+.apply_lessor_title, .lessor_item_msg, .lessor_item_del, .room_type_i_select {
+  display: flex;
+}
+
+.apply_header image, .room_num_img image, .lessor_add image, .lessor_del image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 公共样式end */
+
+/* 网签申请目录start */
+
+.apply_items {
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 20rpx 0 20rpx;
+  font-size: 30rpx;
+  color: #666;
+  margin-top: 28rpx;
+}
+
+.apply_item {
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 8rpx;
+  margin-bottom: 20rpx;
+}
+
+.apply_item_title {
+  width: 100%;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 80rpx;
+  border-bottom: solid 1rpx #ececec;
+}
+
+.apply_item_title text {
+  padding-left: 16rpx;
+}
+.apply_item_title text .hint{
+	font-size: 24rpx;
+	margin-left: 0;
+  color: red;
+}
+.apply_title_icon {
+  width: 8rpx;
+  height: 28rpx;
+  background-color: #3889f0;
+  border-radius: 8rpx;
+  margin-left: 28rpx;
+}
+
+.apply_item_contents {
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 26rpx;
+}
+
+.apply_item_content {
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  height: 98rpx;
+  border-bottom: solid 1rpx #ececec;
+}
+
+/* 填写基本信息start */
+
+.apply_bs_item_right {
+  font-size: 26rpx;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.apply_bs_item_r_choice {
+  align-items: center;
+  justify-content: center;
+  height: 48rpx;
+  width: auto;
+  background-color: #f7f7f7;
+  border: solid 1rpx #d8d8d8;
+  border-radius: 8rpx;
+  /* margin-left: 16rpx; */
+  color: #333;
+  padding: 0 20rpx;
+}
+
+.apply_bs_item_r_choice:nth-of-type(2) {
+  margin-left: 25rpx;
+}
+
+.checked {
+  background-color: #3889f0;
+  border: none;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.apply_bs_item_r_addr {
+  text-align: right;
+}
+
+.apply_bs_item_addr, .apply_item_contract {
+  width: 40%;
+}
+
+.room_num {
+  padding-right: 10rpx;
+}
+
+.room_num_img, .room_type_i_select image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.room_type_item {
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+.room_type_items {
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  height: 98rpx;
+  border-bottom: solid 1rpx #ececec;
+}
+
+.room_type_i_select {
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10rpx;
+}
+
+.room_type_i_select_t {
+  width: 100rpx;
+  text-align: center;
+}
+
+/* .room_type_i_select text{
+  display: flex;
+  justify-content: center;
+} */
+
+/* 填写基本信息end */
+
+/* 出租人信息start */
+
+.apply_item_content {
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  height: 98rpx;
+  border-bottom: solid 1rpx #ececec;
+}
+
+.apply_lessor_content {
+  /* align-items: center; */
+  flex-wrap: nowrap;
+  flex-direction: row;
+  height: 190rpx;
+  border-bottom: solid 1rpx #ececec;
+  justify-content: space-between;
+  padding: 15rpx 0;
+  box-sizing: border-box;
+}
+.apply_lessor_content text{
+  width: 100rpx;
+}
+.apply_lessor_item {
+  padding-right: 26rpx;
+}
+
+.lessor_name_input, .lessor_name_tel {
+  border: solid 1rpx #d8d8d8;
+  width: 144rpx;
+  height: 70rpx;
+  border-radius: 8rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+
+.lessor_name_tel {
+  width: 212rpx;
+}
+
+.apply_lessor_add {
+  align-items: center;
+  flex-wrap: nowrap;
+  padding-right: 30rpx;
+  color: #3889f0;
+}
+
+.lessor_add {
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.apply_lessor {
+  justify-content: space-between;
+}
+
+.apply_lessor_title {
+  align-items: center;
+}
+
+.lessor_del {
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.lessor_item_msg {
+  align-items: center;
+}
+
+.contract_text {
+  padding-left: 36rpx;
+}
+
+/* 出租人信息end */
+
+/* 租赁信息start */
+
+.contract_input {
+  width: 100rpx;
+  height: 70rpx;
+  border: solid 1rpx #d8d8d8;
+  border-radius: 8rpx;
+  margin: 0 26rpx;
+  text-align: center;
+}
+
+/* 租赁信息end */
+
+/* 网签申请目录end */
+
+/* 下一步按钮start */
+
+.apply_next {
+  width: 100%;
+  padding: 20rpx 20rpx 38rpx 20rpx;
+}
+
+.apply_next_btn::after {
+  border: none;
+}
+
+wx-button {
+  background-color: #3889f0;
+  color: #fff;
+  width: 100%;
+  height: 90rpx;
+  font-size: 32rpx;
+}
+
+/* 下一步按钮end */
+
+/* .apply_next{
+  position: absolute;
+  right: 20rpx;
+  left: 20rpx;
+  bottom: 0;
+  color: #ffffff;
+}
+.apply_next_btn::after{
+  border: none;
+}
+wx-button{
+  background-color: #3889f0;
+  color: #ffffff;
+  width: 100%;
+  height: 90rpx;
+  font-size: 32rpx;
+} */
+
+/* 下一步按钮end */
+
+/* 基本信息start */
+
+/* .base_msg{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.bs_title,.bs_addr,.bs_lease{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx 0 20rpx;
+  border-bottom: 1rpx solid #efefef;
+}
+.bs_title{
+  height: 100rpx;
+}
+.bs_role,.bs_room_num{
+  width: 100%;
+  display: flex;
+  padding: 0 20rpx 0 20rpx;
+  border-bottom: 1rpx solid #efefef;
+}
+.bs_role,.bs_room_num{
+  height: 150rpx;
+  justify-content: space-between;
+}
+.bs_role_label,.bs_room_label{
+  margin-top: 50rpx;
+}
+.bs_role #select,.bs_room_num #select{
+  margin-top: 35rpx;
+}
+.bs_addr,.bs_lease{
+  flex-wrap: wrap;
+  padding: 20rpx 20rpx;
+} */
+
+/* .bs_lease{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+} */
+
+/* .bs_lease_type{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20rpx;
+}
+.check_boxes{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.bs_check checkbox{
+  padding: 0 14rpx 14rpx 0;
+}
+.bs_landlord,.bs_tenant,.bs_contract,.bs_rent{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx 20rpx;
+}
+.bs_landlord,.bs_tenant,.bs_contract{
+  border-bottom: 1rpx solid #efefef;
+}
+.bs_ll_label,.bs_t_label{
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+button{
+  margin: 0;
+}
+.bs_ll_item,.bs_t_item{
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin-top: 20rpx;
+}
+.bs_ll_item_name,.bs_ll_item_tel,.bs_t_item_name,.bs_t_item_tel,.bs_rent_num,.bs_rent_m{
+  border: 1rpx solid gainsboro;
+  padding: 10rpx 0 10rpx 10rpx;
+}
+.bs_ll_item input,.bs_t_item input{
+  margin-right: 24rpx;
+}
+.bs_ll_item_name,.bs_t_item_name{
+  width: 150rpx;
+}
+.bs_ll_item_tel,.bs_t_item_tel{
+  width: 350rpx;
+}
+.bs_contract,.bs_rent_item{
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.bs_rent_item{
+  display: flex;
+  width: 100%;
+  padding-bottom: 20rpx;
+}
+.bs_rent_num{
+  width: 300rpx;
+}
+.bs_rent_m{
+  width: 200rpx;
+}
+.bs_step{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+} */
+
+/* 基本信息end */

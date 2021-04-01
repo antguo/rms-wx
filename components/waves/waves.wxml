@@ -1,0 +1,11 @@
+<view class="waveWrapper waveAnimation">
+  <!-- <view class="waveWrapperInner bgTop">
+    <view class="wave waveTop" style="background-image: url('https://s2.ax1x.com/2019/09/26/um8g7n.png')"></view>
+  </view> -->
+  <view class="waveWrapperInner bgMiddle">
+    <view class="wave waveMiddle" style="background-image: url('/images/wave.png')"></view>
+  </view>
+  <view class="waveWrapperInner bgBottom">
+    <view class="wave waveBottom" style="background-image: url('/images/wave-blue.png')"></view>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+{
+  "name": "rms-wx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "miniprogram-sm-crypto": "^0.1.0",
+    "vant": "^2.2.7",
+    "vant-weapp": "^1.0.0-beta.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

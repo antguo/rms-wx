@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "view-mask":"/components/view-mask/view-mask"
+  },
+  "navigationBarTitleText": "住房租赁网签"
+}

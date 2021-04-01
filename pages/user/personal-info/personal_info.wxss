@@ -1,0 +1,78 @@
+page{
+  background-color: #f4fafa;
+  border-top: solid 1rpx #d5d5d5;
+}
+.container_items{
+  width: 100%;
+  padding: 0 20rpx;
+}
+/* 公共样式start */
+.personal_items,.personal_item,.personal_item_name{
+  display: flex;
+}
+.personal_item_img image{
+  width: 100%;
+  height: 100%;
+}
+/* 公共样式end */
+/* 个人信息目录start */
+.personal_items{
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 20rpx 0 20rpx;
+  margin-top: 28rpx;
+  background-color: #ffffff;
+  border-radius: 8rpx;
+}
+.personal_item{
+  height: 96rpx;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-size: 30rpx;
+  color: #323232;
+}
+.personal_i_line{
+  border-bottom: solid 1rpx #ebebeb;
+}
+.personal_i_img{
+  padding: 18rpx 0;
+}
+.personal_item_name{
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.personal_item_img{
+  width: 80rpx;
+  height: 80rpx;
+}
+.personal_item_n_title{
+  padding: 14rpx 0;
+}
+.personal_item_n_input{
+  padding-left: 20rpx;
+}
+.personal_item_img image{
+  border-radius: 80rpx;
+}
+/* 个人信息目录end */
+/* 按钮start */
+.personal_save{
+  position: absolute;
+  right: 20rpx;
+  left: 20rpx;
+  bottom: 33rpx;
+  color: #ffffff;
+}
+.personal_save_btn::after{
+  border: none;
+}
+wx-button{
+  background-color: #3889f0;
+  color: #ffffff;
+  width: 100%;
+  height: 90rpx;
+  font-size: 38rpx;
+}

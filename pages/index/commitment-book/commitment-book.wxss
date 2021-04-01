@@ -1,0 +1,5 @@
+.main{padding: 0 50rpx;}
+.main .tit{font-size: 22rpx;margin: 20rpx 0 50rpx 0;font-weight: bold;}
+.main .cent>view:first-child{font-size: 18rpx;text-indent: 60rpx;}
+.cent>view:first-child text{padding: 0 20rpx;font-weight: bold;text-decoration: underline;}
+.cent>view:last-child{margin-top: 40rpx;font-size: 18rpx;}

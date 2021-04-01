@@ -1,0 +1,8 @@
+<picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+  <view class="picker">
+    <input class="picker_input" value='{{time}}' placeholder='选择时间' placeholder-style="color:#d5d5d5"/>
+    <view class="picker_arrow">
+      <image src="/images/icon/arrow.png" mode="aspectFill"></image>
+    </view>
+  </view>
+</picker>

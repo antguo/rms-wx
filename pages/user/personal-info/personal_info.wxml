@@ -1,0 +1,73 @@
+<view class="container">
+  <view class="container_items">
+    <view class="personal_items">
+      <view class="personal_item personal_i_img personal_i_line" bindtap="chooseUserface">
+        <view class="personal_item_name">
+          <text>头像:</text>
+        </view>
+        <view class="personal_item_img">
+          <image src="{{user.imagesUrl?user.imagesUrl:'/images/icon/my.png'}}" mode="aspectFill"></image>
+        </view>
+      </view>
+      <view class="personal_item personal_i_line">
+        <view class="personal_item_name">
+          <text>昵称:</text>
+          <view class="personal_item_n_input">
+            <input placeholder="请输入姓名" placeholder-style="color:#666666" value="{{user.userName}}" bindinput="changeUserInput" data-val="userName"></input>
+          </view>
+        </view>
+      </view>
+      <view class="personal_item personal_i_line">
+        <view class="personal_item_name">
+          <text>绑定手机:</text>
+          <view class="personal_item_n_input">
+            <text style="color:#666">{{user.mobile}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="personal_item personal_i_line">
+        <view class="personal_item_name">
+          <text>省\市\区:</text>
+          <view class="personal_item_n_input">
+            <picker mode="region" value="{{region}}" bindchange="regionChange">{{region[0]}}  {{region[1]}}  {{region[2]}}</picker>
+          </view>
+        </view>
+      </view>
+      <view class="personal_item personal_i_line">
+        <view class="personal_item_name">
+          <text>详细地址:</text>
+          <view class="personal_item_n_input">
+            <input placeholder="请输入详细地址" placeholder-style="color:#999999" value="{{user.address}}" bindinput="changeUserInput" data-val="address"></input>
+          </view>
+        </view>
+      </view>
+      <view class="personal_item personal_i_line">
+        <view class="personal_item_name">
+          <text>收件人:</text>
+          <view class="personal_item_n_input">
+            <input placeholder="请输入收件人姓名" placeholder-style="color:#999999" value="{{user.recipients}}" bindinput="changeUserInput" data-val="recipients"></input>
+          </view>
+        </view>
+      </view>
+      <view class="personal_item personal_i_line">
+        <view class="personal_item_name">
+          <text>收件人手机号:</text>
+          <view class="personal_item_n_input">
+            <input placeholder="请输入收件人手机号" placeholder-style="color:#999999" value="{{user.tel}}" type="number" maxlength="11" bindinput="changeUserInput" data-val="tel"></input>
+          </view>
+        </view>
+      </view>
+      <view class="personal_item">
+        <view class="personal_item_name">
+          <text>邮编:</text>
+          <view class="personal_item_n_input">
+            <input placeholder="请输入邮编号码" placeholder-style="color:#999999" value="{{user.postCode}}" bindinput="changeUserInput" data-val="postCode"></input>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="personal_save">
+      <button class="personal_save_btn" bindtap="updateUserInfo">保存</button>
+    </view>
+  </view>
+</view>

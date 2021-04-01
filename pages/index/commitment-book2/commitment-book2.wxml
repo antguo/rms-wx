@@ -1,0 +1,13 @@
+<view class="main">
+  <view class="tit text-center">承诺书</view>
+  <view class="person">出租人：<text>{{info.userName}}</text></view>
+  <view class="person">承租人：<text>{{tenantsName}}</text></view>
+  <view class="cent">
+    <view>
+      经双方协商一致，同意于<text>{{year}}</text>年<text>{{month}}</text>月<text>{{day}}</text>日申请撤销房屋坐落于<text>{{info.address}}</text>的住房租赁网签合同。
+		</view>
+		<view class="flex-row-end">
+			<text>{{date}}</text>
+		</view>
+  </view>
+</view>

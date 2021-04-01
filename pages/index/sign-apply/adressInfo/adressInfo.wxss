@@ -1,0 +1,73 @@
+page{
+  background-color: #faf9f7;
+  border-top: solid 1rpx #d5d5d5;
+}
+.container_items{
+  width: 100%;
+  padding: 20rpx 20rpx;
+}
+/* 公共样式start */
+.pay_item,.pay_item_img,.pay_step{
+  display: flex;
+}
+.pay_img image{
+  width: 100%;
+  height: 100%;
+}
+/* 公共样式end */
+/* 头部图片start */
+.pay_item{
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  border-radius: 8rpx;
+}
+.pay_item_img{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1rpx solid #ececec;
+  padding: 44rpx 0;
+  font-size: 32rpx;
+  color: #666666;
+}
+.pay_img{
+  width: 216rpx;
+  height: 168rpx;
+  margin-bottom: 20rpx;
+}
+/* 头部图片end */
+/* 头部描述end */
+/* 按钮start */
+.pay_step{
+  width: 100%;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-top: 40rpx;
+}
+.pay_step_reload,.pay_step_next{
+  width: 340rpx;
+  height: 90rpx;
+  font-size: 32rpx;
+}
+.pay_step_reload{
+  border: 1rpx solid #3889f0;
+  color: #3889f0;
+  background: white;
+}
+.pay_step_next{
+  background-color: #3889f0;
+  color: #ffffff;
+}
+
+.addressInfo{
+	background: white;
+	padding: 50rpx 30rpx;
+}
+.addressInfo>view:first-child>view:first-child{
+	margin-right: 60rpx;
+}
+.addressInfo>view:last-child{
+	margin-top: 20rpx;
+}

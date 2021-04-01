@@ -1,0 +1,21 @@
+
+<image class='login-bg' src='/images/authorize-bg.png'></image>
+<view class="title">住房租赁网签</view>
+<view class="sub-title">安全 方便 快捷</view>
+<button wx:if="{{!isShowPop}}" class="login-btn" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" >
+  点击授权
+</button>
+
+<view class="popup flex-col-center flex-column" wx:if="{{isShowPop}}">
+  <view class="tit text-center">
+    <text>住房租赁网签小程序</text>
+    <image src="/images/loginTit.png"></image>
+  </view>
+  <image mode="widthFix" src="/images/logo.png"></image>
+  <view style="color:#666666;font-size:20rpx;">马上开启我的网签</view>
+  <view class="btn flex-center">立即登录
+    <button open-type="getPhoneNumber" bindgetphonenumber="bindGetPhoneNumber"></button>
+  </view>
+</view>
+
+<view-mask wx:if="{{isShowPop}}" />

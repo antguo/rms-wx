@@ -1,0 +1,15 @@
+<view class="select">
+  <view class="select-bar" bindtap="opens"  data-item="1">
+    <view class="select-bar-text">
+      <text>{{start}}</text>
+    </view>
+    <view class="select-arrow">
+      <image src="{{!isstart?openimg:offimg}}" mode="aspectFill"></image>
+    </view>
+  </view>
+  <view class="select-option {{!isstart?'option-hide':'option-show'}}">
+    <block wx:for="{{optionsData}}" wx:key="item">
+    <view class="option-item {{choiceItem==item.id?'choice-item':''}}" catchtap="onclicks1" data-index="{{index}}">{{item.name}}</view>
+    </block>
+  </view>
+</view>

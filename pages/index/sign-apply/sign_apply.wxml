@@ -1,0 +1,209 @@
+<view class="container">
+  <view class="apply_header">
+    <image src="/images/sign-apply-benner.png"></image>
+  </view>
+  <view class="apply_items">
+    <view class="apply_item">
+      <view class="apply_item_title">
+        <view class="apply_title_icon"></view>
+        <text>填写基本信息</text>
+      </view>
+      <view class="apply_item_contents">
+        <!-- 出租角色 -->
+        <view class="apply_item_content">
+          <text>我是</text>
+          <view class="apply_bs_item_right">
+            <view wx:for="{{roleTpye}}" wx:key="{{index}}" class="apply_bs_item_r_choice {{item.isActive?'checked':''}}" data-index="{{index}}" bindtap="changeRoleType">
+              <text>{{item.name}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="apply_item_content">
+          <text class="apply_bs_item_addr">产权地址</text>
+          <view class="apply_bs_item_right flex-auto">
+            <input class="flex-auto" placeholder-style="color: #d5d5d5;" placeholder="请输入地址" bindinput="changeVal" data-val="address" value="{{address}}"></input>
+          </view>
+        </view>
+        <!-- 出租类型 -->
+        <view class="apply_item_content">
+          <text>出租类型</text>
+          <view class="apply_bs_item_right">
+            <view wx:for="{{leaseType}}" wx:key="{{index}}" class="apply_bs_item_r_choice {{item.isActive?'checked':''}}" bindtap="changeLeaseType"  data-index="{{index}}">
+              <text>{{item.name}}</text>
+            </view>
+          </view>
+        </view>
+        <picker data-name="rooms" bindchange="pickerChange" value="{{roomIndex}}" range="{{roomArray}}">
+        <view class="apply_item_content" wx:if="{{leaseType[1].isActive}}">
+          <text>租赁房间数</text>
+          <view class="apply_bs_item_right">
+            <text class="room_num">{{roomArray[roomIndex]}}</text>
+            <image class="room_num_img" src="/images/icon/arrow-right.png" mode="aspectFill"></image>
+          </view>
+        </view>
+        </picker>
+        <block wx:if="{{leaseType[1].isActive}}">
+          <view class="room_type_items" wx:for="{{roomTypeArray}}" wx:key="{{index}}">
+            <view class="room_type_item">
+              <text>朝向</text>
+              <picker data-index="{{index}}" bindchange="directionChange" value="{{item.direction}}" range="{{roomDirection}}">
+                <view class="room_type_i_select">
+                  <view class="room_type_i_select_t">
+                    <text wx:if="{{item.direction == ''}}" style="color: #d5d5d5;">请选择</text>
+                    <text>{{item.direction}}</text>
+                  </view>
+                  <image src="/images/icon/arrow.png" mode="aspectFill"></image>
+                </view>
+              </picker>
+              <text>, 卧室</text>
+              <picker data-index="{{index}}" bindchange="bedroomChange" value="{{item.roomNum}}" range="{{roomNum}}">
+                <view class="room_type_i_select">
+                  <view class="room_type_i_select_t">
+                    <text wx:if="{{item.roomNum == ''}}" style="color: #d5d5d5;">请选择</text>
+                    <text>{{item.roomNum}}</text>
+                  </view>
+                  <image src="/images/icon/arrow.png" mode="aspectFill"></image>
+                </view>
+              </picker>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="apply_item">
+      <view class="apply_item_title apply_lessor">
+        <view class="apply_lessor_title">
+          <view class="apply_title_icon"></view>
+          <text>出租人信息<text class="hint">(房产证明内产权人均须填写)</text></text>
+        </view>
+        <view class="apply_lessor_add" data-type="landlordInfos" bindtap="addUserInfo">
+          <view class="lessor_add">
+            <image src="/images/icon/add.png" mode="aspectFill"></image>
+          </view>
+          <text>添加</text>
+        </view>
+      </view>
+      <view class="apply_item_contents">
+        <!-- 出租人信息 -->
+        <block wx:for="{{landlordInfos}}" wx:key="{{index}}">
+          <view class="apply_lessor_content" style="border:none;">
+            <view class="lessor_item_msg flex-column flex-row-between">
+              <view class="flex">
+                <view class="apply_lessor_item flex-col-center">
+                  <text class="flex-none">姓名</text>
+                  <input class="lessor_name_input" value="{{item.userName}}" data-index="{{index}}" data-arr="landlordInfos" data-key="userName" bindinput="saveUserInfos" placeholder="输入姓名" placeholder-style="color:#d5d4d4"></input>
+                </view>
+                <view class="apply_lessor_item flex-col-center">
+                  <text class="flex-none">手机号</text>
+                  <input class="lessor_name_input" value="{{item.mobile}}" data-index="{{index}}" data-arr="landlordInfos" data-key="mobile" bindinput="saveUserInfos" class="lessor_name_tel" placeholder="输入手机号" placeholder-style="color:#d5d4d4" type="number"></input>
+                </view>
+              </view>
+              <view class="apply_lessor_item flex-col-center" style="width:100%;box-sizing: border-box;">
+                <text>身份证</text>
+                <input class="lessor_name_input flex-auto" value="{{item.idCard}}" data-index="{{index}}" data-arr="landlordInfos" data-key="idCard" bindinput="saveUserInfos" placeholder="输入身份证号码" placeholder-style="color:#d5d4d4" type="idcard"></input>
+              </view>
+            </view>
+            <view class="lessor_item_del flex-col-center" wx:if="{{index != 0}}">
+              <view class="lessor_del" data-index="{{index}}" data-delname="landlordInfos" bindtap="delUserInfo">
+                <image src="/images/icon/delete.png" mode="aspectFill"></image>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="apply_item">
+      <view class="apply_item_title apply_lessor">
+        <view class="apply_lessor_title">
+          <view class="apply_title_icon"></view>
+          <text>承租人信息</text>
+        </view>
+        <view class="apply_lessor_add" data-type="tenantsInfos" bindtap="addUserInfo">
+          <view class="lessor_add">
+            <image src="/images/icon/add.png" mode="aspectFill"></image>
+          </view>
+          <text>添加</text>
+        </view>
+      </view>
+      <view class="apply_item_contents">
+				<block wx:for="{{tenantsInfos}}" wx:key="{{index}}">
+				  <view class="apply_lessor_content" style="border:none;">
+				    <view class="lessor_item_msg flex-column flex-row-between">
+				      <view class="flex">
+				        <view class="apply_lessor_item flex-col-center">
+				          <text class="flex-none">姓名</text>
+				          <input class="lessor_name_input" value="{{item.userName}}" data-index="{{index}}" data-arr="tenantsInfos" data-key="userName" bindinput="saveUserInfos" placeholder="输入姓名" placeholder-style="color:#d5d4d4"></input>
+				        </view>
+				        <view class="apply_lessor_item flex-col-center">
+				          <text class="flex-none">手机号</text>
+				          <input class="lessor_name_input" value="{{item.mobile}}" data-index="{{index}}" data-arr="tenantsInfos" data-key="mobile" bindinput="saveUserInfos" class="lessor_name_tel" placeholder="输入手机号" placeholder-style="color:#d5d4d4" type="number"></input>
+				        </view>
+				      </view>
+				      <view class="apply_lessor_item flex-col-center" style="width:100%;box-sizing: border-box;">
+				        <text>身份证</text>
+				        <input class="lessor_name_input flex-auto" value="{{item.idCard}}" data-index="{{index}}" data-arr="tenantsInfos" data-key="idCard" bindinput="saveUserInfos" placeholder="输入身份证号码" placeholder-style="color:#d5d4d4" type="idcard"></input>
+				      </view>
+				    </view>
+				    <view class="lessor_item_del flex-col-center" wx:if="{{index != 0}}">
+				      <view class="lessor_del" data-index="{{index}}" data-delname="tenantsInfos" bindtap="delUserInfo">
+				        <image src="/images/icon/delete.png" mode="aspectFill"></image>
+				      </view>
+				    </view>
+				  </view>
+				</block>
+      </view>
+    </view>
+    <view class="apply_item">
+      <view class="apply_item_title">
+        <view class="apply_title_icon"></view>
+        <text>租赁信息</text>
+      </view>
+      <view class="apply_item_contents">
+        <view class="apply_item_content">
+          <text class="apply_item_contract">合同期</text>
+          <view class="apply_bs_item_right">
+            <picker mode="date" start="2019-01-01" data-end="2027-01-01" bindchange="changeStarData">
+              <view class="room_type_i_select">
+                <view style="width:180rpx;text-align:center;">
+                  <text wx:if="{{startDate == ''}}" style="color: #d5d5d5;">请选择</text>
+                  <text wx:else>{{startDate}}</text>
+                </view>
+                <image src="/images/icon/arrow.png" mode="aspectFill"></image>
+              </view>
+            </picker>
+            <text>至</text>
+            <picker mode="date" start="2019-01-01" end="2027-01-01" bindchange="changeEedData">
+              <view class="room_type_i_select">
+                <view style="width:180rpx;text-align:center;">
+                  <text wx:if="{{endDate == ''}}" style="color: #d5d5d5;">请选择</text>
+                  <text wx:else>{{endDate}}</text>
+                </view>
+                <image src="/images/icon/arrow.png" mode="aspectFill"></image>
+              </view>
+            </picker>
+          </view>
+        </view>
+        <view class="apply_item_content">
+          <text class="apply_item_contract">月租金</text>
+          <view class="apply_bs_item_right flex-col-center">
+            <input placeholder="请输入金额" type="number" value="{{rent}}" bindinput="changeVal" data-val="rent" placeholder-style="color:#d5d5d5"></input>
+            <text style="padding-left:18rpx;">元</text>
+          </view>
+        </view>
+        <view class="apply_item_content">
+          <text>押金</text>
+          <view class="apply_bs_item_right">
+            <text>押</text>
+            <input type="number" class="contract_input" value="{{detain}}" data-val="detain" bindinput="changeVal"></input>
+            <text>月，付</text>
+            <input type="number" class="contract_input" value="{{payment}}" data-val="payment" bindinput="changeVal"></input>
+            <text>月</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="apply_next">
+    <button class="apply_next_btn" bindtap="goCommitmentLetter">下一步</button>
+  </view>
+</view>

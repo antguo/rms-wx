@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="constainer_item">
+    <view class="letter_item" style="justify-content: space-between;">
+      <view class="letter_item_title">
+        <view class="letter_title_icon"></view>
+        <text>上传承诺书</text>
+      </view>
+    </view>
+    <view class="letter_item flex-column" style="padding: 20rpx;border:none;">
+      <view class="flex-row-center example">
+        <view class="letter_i_demo_img">
+          <text>示例：</text>
+          <view class="letter_demo_img">
+            <image src="/images/commitment.jpg" mode="aspectFill"></image>
+          </view>
+        </view>
+      </view>
+      <view class="imgGroup flex-wrap">
+        <view class="imgWrap" wx:for="{{undertakingPath}}"  wx:key="{{index}}">
+          <image mode="aspectFill" src="{{item}}"></image>
+          <view class="del flex-center" bindtap="delImg" data-index="{{index}}">-</view>
+        </view>
+        <view class="imgWrap" bindtap="uploadLetter" wx:if="{{undertakingPath.length<picker.length}}">
+          <image mode="aspectFill" src="/images/upload-image.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="letter_step flex-column">
+      <picker class="generate" bindchange="pickerChange" range="{{picker}}" range-key="userName">
+        <view class="flex-center"><text>生成承诺书</text></view>
+      </picker>
+      <button class="letter_step_next" bindtap="goOwnershipCertificate">下一步</button>
+    </view>
+  </view>
+</view>
